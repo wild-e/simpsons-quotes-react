@@ -1,8 +1,13 @@
+import Navbar from './components/Navbar';
+import QuoteCard from './components/QuoteCard';
+
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>prout</h1>
+      <Navbar/>
+      <QuoteCard/>
     </div>
   );
 }
