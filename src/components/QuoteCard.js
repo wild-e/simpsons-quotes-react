@@ -1,17 +1,19 @@
-function QuoteCard() {
+import PropTypes from 'prop-types';
+
+function QuoteCard(props) {
 
     return (
   
         <figure className="QuoteCard">
             <img
-                src={image}
-                alt={character}
+                src={props.image}
+                alt={props.character}
             />
             <figcaption>
                 <blockquote>
-                    {quote}
+                    {props.quote}
                 </blockquote>
-                <cite>{character}</cite>
+                <cite>{props.character}</cite>
             </figcaption>
         </figure>
   
@@ -19,8 +21,10 @@ function QuoteCard() {
   
   }
 
-const image = "https://pm1.narvii.com/7070/aeaeadea89d89327a8e5f4f83d10272dc337425fr1-1200-1200v2_128.jpg";
-const quote = " 'Shoplifting is a victimless crime, like punching someone in the dark.' ";
-const character = "Nelson Muntz";
+QuoteCard.propTypes = {
+    image: PropTypes.string.isRequired,
+    character: PropTypes.string.isRequired,
+    quote: PropTypes.string.isRequired,
+};
 
 export default QuoteCard;

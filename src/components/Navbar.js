@@ -1,15 +1,14 @@
-function Navbar() {
+function Navbar(props) {
 
     return (
   
         <nav className="Navbar">
-            <a href={simpsonQuotesUrl} target="_blank" rel="noreferrer">Simpsons Quotes</a>
+            <a href={props.simpsonQuotesUrl} target="_blank" rel="noreferrer">Simpsons Quotes</a>
         </nav>
   
     );
   
   }
 
-const simpsonQuotesUrl = "https://fr.wikipedia.org/wiki/Les_Simpson";
 
 export default Navbar;
